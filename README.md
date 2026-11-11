@@ -2,6 +2,19 @@
 
 A local, single-user cash-flow planner built with **React + TypeScript, FastAPI and SQLite**. Record a starting balance, income, expenses and monthly payments; inspect a 30-day forecast and simulate a purchase without saving it. All calculations use deterministic Python and integer HUF. **No Ollama, external AI API, banking connection or API key is needed.**
 
+## Planned improvements — not implemented yet
+
+The following additions are planned beyond the original AC1–AC8 specification. The current application and setup instructions below describe the existing version; none of these planned features is available yet.
+
+1. **Edit and delete transactions.** Correct descriptions, amounts, dates and income/expense types. Recalculate forecasts after saved changes, and ask for confirmation before deletion.
+2. **Manage recurring expenses.** Edit descriptions, amounts and payment days; pause/resume schedules; and delete schedules with confirmation. Paused schedules remain stored but are excluded from forecasts.
+3. **Search and filter transactions.** Search descriptions and filter by income/expense type and date range. Filters affect only the displayed transaction list, never the forecast calculations.
+4. **Agentic AI planning assistant using the hosted Google Gemini API.** Answer questions such as “Can I afford an 85,000 HUF purchase, and when within the next 30 days?” The assistant will select and call read-only application tools to inspect the profile and forecast, simulate purchases and compare dates, then explain the calculated results. Python will continue to perform all financial calculations. The agent will not create, edit or delete financial records. Show the tools used and their results, and handle missing configuration or model-service failures without preventing normal app use.
+
+For the planned Gemini integration, keep the API key on the backend and out of source control and browser code. Explain in the interface that submitted questions and the financial context needed to answer them will be sent to Google. The exact model and configuration remain to be selected; the current version needs no API key.
+
+Implementation work will include tests for the new workflows, regression checks for AC1–AC8, and verification that any database migration preserves existing records. Update setup instructions and verification results after implementation, and document the expanded scope in the specification for instructor review. Preserve `submission-2-v1` as the original baseline. These planned additions are separate from the instructor's later change request and do not complete the independent two-tool comparison requirement.
+
 ## Quick start
 
 Requirements: Python 3.13, Node.js 22.13 or newer compatible 22.x, npm 10. Run from this repository's root. These versions were used for verification on macOS. Network is needed to install packages, not for normal app operation.
