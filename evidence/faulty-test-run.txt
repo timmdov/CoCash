@@ -4,20 +4,23 @@ _________________ test_month_end_contract[2026-2-31-expected1] _________________
 
 year = 2026, month = 2, day = 31, expected = datetime.date(2026, 2, 28)
 
-    @pytest.mark.parametrize('year,month,day,expected', [
-        (2026, 1, 31, date(2026, 1, 31)),
-        (2026, 2, 31, date(2026, 2, 28)),
-        (2028, 2, 31, date(2028, 2, 29)),
-        (2026, 3, 31, date(2026, 3, 31)),
-        (2026, 4, 31, date(2026, 4, 30)),
-        (2100, 2, 29, date(2100, 2, 28)),
-        (2000, 2, 29, date(2000, 2, 29)),
-        (2026, 2, 1, date(2026, 2, 1)),
-    ])
+    @pytest.mark.parametrize(
+        "year,month,day,expected",
+        [
+            (2026, 1, 31, date(2026, 1, 31)),
+            (2026, 2, 31, date(2026, 2, 28)),
+            (2028, 2, 31, date(2028, 2, 29)),
+            (2026, 3, 31, date(2026, 3, 31)),
+            (2026, 4, 31, date(2026, 4, 30)),
+            (2100, 2, 29, date(2100, 2, 28)),
+            (2000, 2, 29, date(2000, 2, 29)),
+            (2026, 2, 1, date(2026, 2, 1)),
+        ],
+    )
     def test_month_end_contract(year, month, day, expected):
 >       assert monthly_occurrence(year, month, day) == expected
 
-comparison/test_month_end.py:32: 
+comparison/test_month_end.py:36: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 year = 2026, month = 2, day = 31
@@ -27,25 +30,28 @@ year = 2026, month = 2, day = 31
 >       return date(year, month, day)
 E       ValueError: day is out of range for month
 
-comparison/faulty_month_end.py:7: ValueError
+comparison/faulty_month_end.py:8: ValueError
 _________________ test_month_end_contract[2028-2-31-expected2] _________________
 
 year = 2028, month = 2, day = 31, expected = datetime.date(2028, 2, 29)
 
-    @pytest.mark.parametrize('year,month,day,expected', [
-        (2026, 1, 31, date(2026, 1, 31)),
-        (2026, 2, 31, date(2026, 2, 28)),
-        (2028, 2, 31, date(2028, 2, 29)),
-        (2026, 3, 31, date(2026, 3, 31)),
-        (2026, 4, 31, date(2026, 4, 30)),
-        (2100, 2, 29, date(2100, 2, 28)),
-        (2000, 2, 29, date(2000, 2, 29)),
-        (2026, 2, 1, date(2026, 2, 1)),
-    ])
+    @pytest.mark.parametrize(
+        "year,month,day,expected",
+        [
+            (2026, 1, 31, date(2026, 1, 31)),
+            (2026, 2, 31, date(2026, 2, 28)),
+            (2028, 2, 31, date(2028, 2, 29)),
+            (2026, 3, 31, date(2026, 3, 31)),
+            (2026, 4, 31, date(2026, 4, 30)),
+            (2100, 2, 29, date(2100, 2, 28)),
+            (2000, 2, 29, date(2000, 2, 29)),
+            (2026, 2, 1, date(2026, 2, 1)),
+        ],
+    )
     def test_month_end_contract(year, month, day, expected):
 >       assert monthly_occurrence(year, month, day) == expected
 
-comparison/test_month_end.py:32: 
+comparison/test_month_end.py:36: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 year = 2028, month = 2, day = 31
@@ -55,25 +61,28 @@ year = 2028, month = 2, day = 31
 >       return date(year, month, day)
 E       ValueError: day is out of range for month
 
-comparison/faulty_month_end.py:7: ValueError
+comparison/faulty_month_end.py:8: ValueError
 _________________ test_month_end_contract[2026-4-31-expected4] _________________
 
 year = 2026, month = 4, day = 31, expected = datetime.date(2026, 4, 30)
 
-    @pytest.mark.parametrize('year,month,day,expected', [
-        (2026, 1, 31, date(2026, 1, 31)),
-        (2026, 2, 31, date(2026, 2, 28)),
-        (2028, 2, 31, date(2028, 2, 29)),
-        (2026, 3, 31, date(2026, 3, 31)),
-        (2026, 4, 31, date(2026, 4, 30)),
-        (2100, 2, 29, date(2100, 2, 28)),
-        (2000, 2, 29, date(2000, 2, 29)),
-        (2026, 2, 1, date(2026, 2, 1)),
-    ])
+    @pytest.mark.parametrize(
+        "year,month,day,expected",
+        [
+            (2026, 1, 31, date(2026, 1, 31)),
+            (2026, 2, 31, date(2026, 2, 28)),
+            (2028, 2, 31, date(2028, 2, 29)),
+            (2026, 3, 31, date(2026, 3, 31)),
+            (2026, 4, 31, date(2026, 4, 30)),
+            (2100, 2, 29, date(2100, 2, 28)),
+            (2000, 2, 29, date(2000, 2, 29)),
+            (2026, 2, 1, date(2026, 2, 1)),
+        ],
+    )
     def test_month_end_contract(year, month, day, expected):
 >       assert monthly_occurrence(year, month, day) == expected
 
-comparison/test_month_end.py:32: 
+comparison/test_month_end.py:36: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 year = 2026, month = 4, day = 31
@@ -83,25 +92,28 @@ year = 2026, month = 4, day = 31
 >       return date(year, month, day)
 E       ValueError: day is out of range for month
 
-comparison/faulty_month_end.py:7: ValueError
+comparison/faulty_month_end.py:8: ValueError
 _________________ test_month_end_contract[2100-2-29-expected5] _________________
 
 year = 2100, month = 2, day = 29, expected = datetime.date(2100, 2, 28)
 
-    @pytest.mark.parametrize('year,month,day,expected', [
-        (2026, 1, 31, date(2026, 1, 31)),
-        (2026, 2, 31, date(2026, 2, 28)),
-        (2028, 2, 31, date(2028, 2, 29)),
-        (2026, 3, 31, date(2026, 3, 31)),
-        (2026, 4, 31, date(2026, 4, 30)),
-        (2100, 2, 29, date(2100, 2, 28)),
-        (2000, 2, 29, date(2000, 2, 29)),
-        (2026, 2, 1, date(2026, 2, 1)),
-    ])
+    @pytest.mark.parametrize(
+        "year,month,day,expected",
+        [
+            (2026, 1, 31, date(2026, 1, 31)),
+            (2026, 2, 31, date(2026, 2, 28)),
+            (2028, 2, 31, date(2028, 2, 29)),
+            (2026, 3, 31, date(2026, 3, 31)),
+            (2026, 4, 31, date(2026, 4, 30)),
+            (2100, 2, 29, date(2100, 2, 28)),
+            (2000, 2, 29, date(2000, 2, 29)),
+            (2026, 2, 1, date(2026, 2, 1)),
+        ],
+    )
     def test_month_end_contract(year, month, day, expected):
 >       assert monthly_occurrence(year, month, day) == expected
 
-comparison/test_month_end.py:32: 
+comparison/test_month_end.py:36: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 year = 2100, month = 2, day = 29
@@ -111,7 +123,7 @@ year = 2100, month = 2, day = 29
 >       return date(year, month, day)
 E       ValueError: day is out of range for month
 
-comparison/faulty_month_end.py:7: ValueError
+comparison/faulty_month_end.py:8: ValueError
 =========================== short test summary info ============================
 FAILED comparison/test_month_end.py::test_month_end_contract[2026-2-31-expected1]
 FAILED comparison/test_month_end.py::test_month_end_contract[2028-2-31-expected2]

@@ -1,0 +1,2 @@
+# Preserve unedited execution logs, including pytest's traceback spacing.
+evidence/*.txt -whitespace

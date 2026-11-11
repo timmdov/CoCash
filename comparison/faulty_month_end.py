@@ -1,4 +1,5 @@
 """DELIBERATELY FAULTY teaching example; never imported by production code."""
+
 from datetime import date
 
 

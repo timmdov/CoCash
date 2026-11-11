@@ -1,6 +1,6 @@
 # CoCash development rules
 
-- Specification.md in the parent directory defines AC1–AC8; do not silently change them.
+- docs/specification.md is the portable specification defining AC1–AC8 (the original supplied Specification.md remains in the parent directory); do not silently change them.
 - React/TypeScript frontend, FastAPI backend, SQLite persistence. No AI runtime or banking integration.
 - Keep all financial calculations in pure Python domain functions, using integer HUF and an injected date. Today is Europe/Budapest.
 - Forecast exactly 30 days including today; aggregate same-day entries before testing balance < buffer. Clamp monthly expenses to month end. Exclude past transactions.

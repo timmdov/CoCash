@@ -1,0 +1,4 @@
+PASS: production HTML and bundled JS/CSS served over HTTP
+PASS: AC7 risky simulation and no persisted changes
+PASS: AC2 income, AC4 recurring persistence, AC3 rejected write is atomic
+PASS: AC8 real server-process restart preserves all state
