@@ -1,0 +1,14 @@
+
+> cocash@0.1.0 test
+> vitest run
+
+
+ RUN  v3.1.3 /Users/teymurmammadov/Downloads/BME/Fall_2026-2027/AI Assisted Software Development/HomeWork/Code/frontend
+
+ ✓ src/App.test.tsx (8 tests) 574ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  23:18:49
+   Duration  1.32s (transform 65ms, setup 121ms, collect 79ms, tests 574ms, environment 324ms, prepare 40ms)
+

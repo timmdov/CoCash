@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.sqlite3*
+node_modules/
+dist/
+.DS_Store
+.env
+playwright-report/
+test-results/
